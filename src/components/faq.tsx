@@ -8,8 +8,8 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" style={{ padding: 'var(--sp-10) 0' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)' }}>
+    <section id="faq" style={{ padding: 'var(--section-py) 0' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <SectionHeader
           eyebrow="Questions answered"
           title={<>Everything you&apos;re<br />wondering about.</>}

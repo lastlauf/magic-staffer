@@ -8,7 +8,7 @@ export default function SectionHeader({
   subtitle?: string;
 }) {
   return (
-    <div className="text-center" style={{ marginBottom: 'var(--sp-8)' }}>
+    <div className="text-center" style={{ marginBottom: 'clamp(var(--sp-6), 5vw, var(--sp-8))' }}>
       <span
         className="reveal"
         style={{

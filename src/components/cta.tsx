@@ -8,7 +8,7 @@ export default function CTA() {
       id="cta"
       style={{
         background: 'linear-gradient(135deg, #FF5A5F 0%, #FF8566 100%)',
-        padding: 'var(--sp-10) 0',
+        padding: 'var(--section-py) 0',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -27,7 +27,7 @@ export default function CTA() {
       {/* Ghost text */}
       <div className="cta-ghost-text">Staffable</div>
 
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)', position: 'relative' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)', position: 'relative' }}>
         <div style={{ textAlign: 'center' }}>
           <h2
             className="reveal"

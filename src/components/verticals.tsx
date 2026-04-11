@@ -51,9 +51,9 @@ export default function Verticals() {
     <section
       ref={sectionRef}
       id="verticals"
-      style={{ padding: 'var(--sp-10) 0' }}
+      style={{ padding: 'var(--section-py) 0' }}
     >
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <SectionHeader
           eyebrow="Built for your industry"
           title={<>See Staffable in <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>your</em> world.</>}
@@ -62,12 +62,12 @@ export default function Verticals() {
 
         {/* Tab Bar */}
         <div
+          className="verticals-tabs"
           style={{
             display: 'flex',
             justifyContent: 'center',
             gap: 'var(--sp-2)',
             marginBottom: 'var(--sp-8)',
-            flexWrap: 'wrap',
           }}
         >
           {VERTICALS.map((v, i) => (
@@ -101,6 +101,7 @@ export default function Verticals() {
         <div className="verticals-content-grid">
           {/* Left — Persona Card */}
           <div
+            className="verticals-persona-card"
             style={{
               background: 'var(--surface)',
               border: '1px solid var(--border)',
@@ -188,8 +189,21 @@ export default function Verticals() {
           align-items: start;
         }
         @media (max-width: 768px) {
+          .verticals-tabs {
+            justify-content: flex-start !important;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: var(--sp-2);
+            margin-left: calc(var(--container-px) * -1);
+            margin-right: calc(var(--container-px) * -1);
+            padding-left: var(--container-px);
+            padding-right: var(--container-px);
+          }
+          .verticals-tabs::-webkit-scrollbar { display: none; }
           .verticals-content-grid { grid-template-columns: 1fr; }
           .verticals-phone-col { display: none; }
+          .verticals-persona-card { padding: var(--sp-5) !important; }
         }
       `}</style>
     </section>

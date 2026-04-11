@@ -5,7 +5,7 @@ export default function PullQuote() {
         background: 'var(--surface-warm)',
         borderTop: '1px solid #F0E6E1',
         borderBottom: '1px solid #F0E6E1',
-        padding: 'var(--sp-9) 0',
+        padding: 'var(--section-py) 0',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -19,7 +19,7 @@ export default function PullQuote() {
           left: '50%',
           transform: 'translateX(-50%)',
           fontFamily: 'var(--font-display)',
-          fontSize: '20rem',
+          fontSize: 'clamp(10rem, 25vw, 20rem)',
           fontWeight: 700,
           color: 'rgba(255,90,95,0.06)',
           lineHeight: 1,
@@ -29,7 +29,7 @@ export default function PullQuote() {
         &ldquo;
       </div>
 
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <p
           className="reveal"
           style={{

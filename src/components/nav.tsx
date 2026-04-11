@@ -31,7 +31,7 @@ export default function Nav() {
           borderBottom: `1px solid ${scrolled ? 'var(--border)' : 'transparent'}`,
           boxShadow: scrolled ? 'var(--shadow-sm)' : 'none',
           zIndex: 100,
-          padding: '0 var(--sp-8)',
+          padding: '0 var(--container-px)',
           height: 64,
           display: 'flex',
           alignItems: 'center',
@@ -140,7 +140,7 @@ export default function Nav() {
 
       <style jsx>{`
         @media (max-width: 768px) {
-          nav { padding: 0 var(--sp-5) !important; }
+          nav { padding: 0 var(--container-px) !important; }
           .nav-links-desktop { display: none !important; }
         }
       `}</style>

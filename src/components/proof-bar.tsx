@@ -22,6 +22,7 @@ function ProofItem({
       }}
     >
       <div
+        className="proof-stat-num"
         style={{
           fontFamily: 'var(--font-display)',
           fontSize: '2.25rem',
@@ -67,7 +68,7 @@ export default function ProofBar() {
         padding: 'var(--sp-7) 0',
       }}
     >
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <div className="proof-grid-wrap">
           {PROOF_STATS.map((stat, i) => (
             <ProofItem key={i} stat={stat} index={i} />
@@ -88,13 +89,18 @@ export default function ProofBar() {
         }
         @media (max-width: 768px) {
           .proof-grid-wrap {
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--sp-4);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
           }
           .proof-grid-wrap > :global(.proof-item-cell) {
             border-right: none;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: var(--sp-4);
+            padding: var(--sp-3) var(--sp-2);
+          }
+          .proof-grid-wrap > :global(.proof-item-cell:nth-child(n+4)) {
+            border-top: 1px solid var(--border);
+          }
+          .proof-grid-wrap > :global(.proof-stat-num) {
+            font-size: 1.75rem !important;
           }
         }
       `}</style>

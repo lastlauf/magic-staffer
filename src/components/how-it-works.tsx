@@ -55,11 +55,11 @@ export default function HowItWorks() {
       id="how-it-works"
       style={{
         background: 'var(--surface)',
-        padding: 'var(--sp-10) 0',
+        padding: 'var(--section-py) 0',
         borderTop: '1px solid var(--border)',
       }}
     >
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <SectionHeader
           eyebrow="Simple by design"
           title={<>Your whole business,<br />one WhatsApp conversation.</>}

@@ -7,11 +7,11 @@ export default function Pricing() {
       id="pricing"
       style={{
         background: 'var(--surface)',
-        padding: 'var(--sp-10) 0',
+        padding: 'var(--section-py) 0',
         borderTop: '1px solid var(--border)',
       }}
     >
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <SectionHeader
           eyebrow="Transparent pricing"
           title={<>Pricing that grows<br />with your crew.</>}
@@ -22,7 +22,7 @@ export default function Pricing() {
           {PRICING_TIERS.map((tier, i) => (
             <div
               key={i}
-              className="reveal"
+              className="reveal pricing-card"
               style={{
                 border: `1.5px solid ${tier.featured ? 'var(--accent)' : 'var(--border)'}`,
                 borderRadius: 20,
@@ -158,7 +158,8 @@ export default function Pricing() {
           gap: var(--sp-5);
         }
         @media (max-width: 768px) {
-          .pricing-grid-wrap { grid-template-columns: 1fr; }
+          .pricing-grid-wrap { grid-template-columns: 1fr; gap: var(--sp-4); }
+          .pricing-grid-wrap > :global(.pricing-card) { padding: var(--sp-5) !important; }
         }
       `}</style>
     </section>

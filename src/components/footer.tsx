@@ -6,8 +6,8 @@ const FOOTER_LINKS = {
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#1C1917', color: '#A8A29E', padding: 'var(--sp-9) 0 var(--sp-7)' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)' }}>
+    <footer style={{ background: '#1C1917', color: '#A8A29E', padding: 'var(--section-py) 0 var(--sp-7)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <div className="footer-grid-wrap" style={{ marginBottom: 'var(--sp-8)' }}>
           {/* Brand Column */}
           <div>

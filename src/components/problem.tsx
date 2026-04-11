@@ -25,8 +25,8 @@ const ICONS = {
 
 export default function Problem() {
   return (
-    <section id="problem" style={{ padding: 'var(--sp-10) 0' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)' }}>
+    <section id="problem" style={{ padding: 'var(--section-py) 0' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <SectionHeader
           eyebrow="The real cost"
           title={<>Running a crew is a full-time job<br />on top of your full-time job.</>}
@@ -73,7 +73,7 @@ export default function Problem() {
               <div
                 style={{
                   fontFamily: 'var(--font-display)',
-                  fontSize: '2.75rem',
+                  fontSize: 'clamp(2rem, 5vw, 2.75rem)',
                   fontWeight: 700,
                   color: 'var(--red)',
                   letterSpacing: '-0.035em',
@@ -101,7 +101,10 @@ export default function Problem() {
           gap: var(--sp-5);
         }
         @media (max-width: 768px) {
-          .problem-grid-wrap { grid-template-columns: 1fr; }
+          .problem-grid-wrap { grid-template-columns: 1fr; gap: var(--sp-4); }
+          .problem-grid-wrap > :global(.prob-card-el) {
+            padding: var(--sp-5) !important;
+          }
         }
       `}</style>
     </section>

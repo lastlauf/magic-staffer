@@ -7,11 +7,11 @@ export default function Testimonials() {
       id="testimonials"
       style={{
         background: 'var(--bg)',
-        padding: 'var(--sp-10) 0',
+        padding: 'var(--section-py) 0',
         borderTop: '1px solid var(--border)',
       }}
     >
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <SectionHeader
           eyebrow="Real businesses"
           title={<>Crews who got their<br />weekends back.</>}
@@ -21,7 +21,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((t, i) => (
             <div
               key={i}
-              className="reveal"
+              className="reveal testi-card"
               style={{
                 background: 'var(--surface)',
                 border: '1px solid var(--border)',
@@ -90,7 +90,8 @@ export default function Testimonials() {
           gap: var(--sp-5);
         }
         @media (max-width: 768px) {
-          .testi-grid-wrap { grid-template-columns: 1fr; }
+          .testi-grid-wrap { grid-template-columns: 1fr; gap: var(--sp-4); }
+          .testi-grid-wrap > :global(.testi-card) { padding: var(--sp-5) !important; }
         }
       `}</style>
     </section>

@@ -14,8 +14,8 @@ const HERO_MESSAGES = [
 
 export default function Hero() {
   return (
-    <section style={{ paddingTop: 120, paddingBottom: 96, overflow: 'visible' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)' }}>
+    <section className="hero-section" style={{ paddingTop: 120, paddingBottom: 96, overflow: 'visible' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <div className="hero-grid">
           {/* Left Column — Content */}
           <div style={{ maxWidth: 540 }}>
@@ -196,6 +196,7 @@ export default function Hero() {
         .fbadge-3 { top: 44%; right: -52px; animation: floatA 2.8s var(--ease-silk) infinite alternate 1.2s; }
 
         @media (max-width: 768px) {
+          .hero-section { padding-top: 80px !important; padding-bottom: 56px !important; }
           .hero-grid { grid-template-columns: 1fr; }
           .hero-visual-col { display: none; }
         }

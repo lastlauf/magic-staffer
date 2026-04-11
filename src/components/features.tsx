@@ -3,8 +3,8 @@ import SectionHeader from './ui/section-header';
 
 export default function Features() {
   return (
-    <section id="features" style={{ padding: 'var(--sp-10) 0' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--sp-8)' }}>
+    <section id="features" style={{ padding: 'var(--section-py) 0' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <SectionHeader
           eyebrow="Everything included"
           title={<>Every tool you need.<br />Nothing you don&apos;t.</>}
@@ -70,7 +70,11 @@ export default function Features() {
           .feat-grid-wrap { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
-          .feat-grid-wrap { grid-template-columns: 1fr 1fr; }
+          .feat-grid-wrap { grid-template-columns: 1fr 1fr; gap: var(--sp-3); }
+          .feat-grid-wrap > :global(.feat-card-el) {
+            padding: var(--sp-4) !important;
+            border-radius: 14px !important;
+          }
         }
       `}</style>
     </section>
