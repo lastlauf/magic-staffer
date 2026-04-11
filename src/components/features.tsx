@@ -34,6 +34,7 @@ export default function Features() {
               }}
             >
               <div
+                className="feat-icon"
                 style={{
                   width: 46,
                   height: 46,
@@ -45,6 +46,7 @@ export default function Features() {
                   justifyContent: 'center',
                   fontSize: '1.25rem',
                   marginBottom: 'var(--sp-4)',
+                  flexShrink: 0,
                 }}
               >
                 {feature.icon}
@@ -70,10 +72,20 @@ export default function Features() {
           .feat-grid-wrap { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
-          .feat-grid-wrap { grid-template-columns: 1fr 1fr; gap: var(--sp-3); }
+          .feat-grid-wrap {
+            grid-template-columns: 1fr;
+            gap: var(--sp-3);
+          }
           .feat-grid-wrap > :global(.feat-card-el) {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: flex-start !important;
+            gap: var(--sp-4) !important;
             padding: var(--sp-4) !important;
             border-radius: 14px !important;
+          }
+          .feat-grid-wrap > :global(.feat-card-el) :global(.feat-icon) {
+            margin-bottom: 0 !important;
           }
         }
       `}</style>

@@ -111,7 +111,7 @@ export default function HowItWorks() {
                       fontSize: '0.875rem',
                       color: 'var(--text-muted)',
                       lineHeight: 1.6,
-                      maxHeight: activeStep === i ? 120 : 0,
+                      maxHeight: activeStep === i ? 200 : 0,
                       overflow: 'hidden',
                       opacity: activeStep === i ? 1 : 0,
                       transition: 'max-height 0.4s var(--ease-expo-out), opacity 0.3s var(--ease-silk)',
@@ -148,6 +148,10 @@ export default function HowItWorks() {
         @media (max-width: 768px) {
           .hiw-grid-wrap { grid-template-columns: 1fr; }
           .demo-wrap-col { display: none; }
+          .hiw-grid-wrap > div > div {
+            padding-left: var(--sp-3) !important;
+            padding-right: var(--sp-3) !important;
+          }
         }
       `}</style>
     </section>

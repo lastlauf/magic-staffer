@@ -7,13 +7,18 @@ export default function LeadCaptureForm({ variant = 'hero' }: { variant?: 'hero'
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [businessType, setBusinessType] = useState('');
+  const [customBusinessType, setCustomBusinessType] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'duplicate' | 'error'>('idle');
 
   const isCTA = variant === 'cta';
 
+  const isOther = businessType === 'Other';
+  const resolvedBusinessType = isOther ? customBusinessType.trim() : businessType;
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !businessType) return;
+    if (isOther && !customBusinessType.trim()) return;
 
     setStatus('loading');
 
@@ -21,7 +26,7 @@ export default function LeadCaptureForm({ variant = 'hero' }: { variant?: 'hero'
       const res = await fetch('/api/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name.trim(), email: email.trim(), businessType }),
+        body: JSON.stringify({ name: name.trim(), email: email.trim(), businessType: resolvedBusinessType }),
       });
 
       if (res.ok) {
@@ -149,6 +154,26 @@ export default function LeadCaptureForm({ variant = 'hero' }: { variant?: 'hero'
           </option>
         ))}
       </select>
+
+      {isOther && (
+        <input
+          type="text"
+          placeholder="What's your business type?"
+          value={customBusinessType}
+          onChange={(e) => setCustomBusinessType(e.target.value)}
+          required
+          style={{
+            ...inputStyle,
+            transition: 'border-color 0.15s var(--ease-silk)',
+          }}
+          onFocus={(e) => {
+            e.currentTarget.style.borderColor = isCTA ? 'rgba(255,255,255,0.5)' : 'var(--accent)';
+          }}
+          onBlur={(e) => {
+            e.currentTarget.style.borderColor = isCTA ? 'rgba(255,255,255,0.3)' : 'var(--border)';
+          }}
+        />
+      )}
 
       <button
         type="submit"
