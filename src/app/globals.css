@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* ── DESIGN TOKENS ── */
+:root {
+  --bg:            #FAFAF8;
+  --surface:       #FFFFFF;
+  --surface-warm:  #FFF7F4;
+  --surface-green: #F0FDF4;
+  --border:        #EAE4DD;
+  --border-2:      #F0EBE4;
+  --text:          #1C1917;
+  --text-2:        #57534E;
+  --text-muted:    #A8A29E;
+  --accent:        #FF5A5F;
+  --accent-rgb:    255,90,95;
+  --accent-light:  #FFF0F0;
+  --green:         #22C55E;
+  --green-2:       #16A34A;
+  --green-dark:    #15803D;
+  --red:           #EF4444;
+  --amber:         #F59E0B;
+
+  --font-display: var(--font-fraunces), 'Georgia', serif;
+  --font-body:    var(--font-plus-jakarta), system-ui, sans-serif;
+
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
+  --sp-9: 96px; --sp-10: 128px;
+
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.03);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.05);
+  --shadow-xl: 0 24px 64px rgba(0,0,0,0.12), 0 8px 20px rgba(0,0,0,0.06);
+
+  --ease-expo-out:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-cinematic: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-silk:      cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-snap:      cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-warm: var(--surface-warm);
+  --color-border: var(--border);
+  --color-border-2: var(--border-2);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-green: var(--green);
+  --color-green-2: var(--green-2);
+  --color-red: var(--red);
+  --color-amber: var(--amber);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+/* ── BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── SCROLL PROGRESS ── */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--accent); transform: scaleX(0); transform-origin: left;
+  z-index: 1000; transition: transform 0.08s var(--ease-silk);
+  pointer-events: none;
+}
+
+/* ── REVEAL SYSTEM ── */
+.reveal {
+  opacity: 0; transform: translateY(18px);
+  transition: opacity 0.6s var(--ease-expo-out), transform 0.6s var(--ease-expo-out);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── FLOATING BADGE ANIMATIONS ── */
+@keyframes floatA { from { transform: translateY(0); } to { transform: translateY(-9px); } }
+@keyframes floatB { from { transform: translateY(0); } to { transform: translateY(-7px); } }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── WHATSAPP MESSAGE STYLES ── */
+.wa-msg {
+  max-width: 82%; padding: 7px 11px; border-radius: 8px;
+  font-size: 0.775rem; line-height: 1.45;
+}
+.wa-msg.out {
+  background: #D9F7BE; align-self: flex-end;
+  border-bottom-right-radius: 2px; color: var(--text);
+}
+.wa-msg.in {
+  background: white; align-self: flex-start;
+  border-bottom-left-radius: 2px; color: var(--text);
+}
+.wa-time {
+  font-size: 0.6rem; color: #999; text-align: right;
+  margin-top: 2px; display: block;
+}
+.wa-check { color: #53BDEB; }
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
