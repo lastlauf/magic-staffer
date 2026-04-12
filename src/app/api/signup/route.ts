@@ -31,14 +31,19 @@ export async function POST(req: NextRequest) {
     const resend = getResend();
     if (resend) {
       try {
-        await resend.emails.send({
+        const { data, error: emailError } = await resend.emails.send({
           from: 'Staffable <onboarding@resend.dev>',
           to: email,
           subject: `Welcome to the waitlist, ${name}!`,
           react: WelcomeEmail({ name, businessType }),
         });
+        if (emailError) {
+          console.error('Resend API error:', JSON.stringify(emailError));
+        } else {
+          console.log('Welcome email sent:', data?.id);
+        }
       } catch (emailError) {
-        console.error('Welcome email failed:', emailError);
+        console.error('Welcome email failed:', emailError instanceof Error ? emailError.message : emailError);
       }
     }
 
