@@ -34,7 +34,10 @@ function ProofItem({
         }}
       >
         {stat.display ? (
-          <span style={{ color: 'var(--accent)' }}>{stat.display}</span>
+          <>
+            <span style={{ color: 'var(--accent)' }}>$</span>
+            <span>0</span>
+          </>
         ) : (
           <>
             <span ref={ref} style={stat.isAccent ? { color: 'var(--accent)' } : undefined}>
@@ -94,10 +97,12 @@ export default function ProofBar() {
           }
           .proof-grid-wrap > :global(.proof-item-cell) {
             border-right: none;
-            padding: var(--sp-4) var(--sp-3);
+            padding: var(--sp-5) var(--sp-3);
           }
           .proof-grid-wrap > :global(.proof-item-cell:nth-child(n+3)) {
             border-top: 1px solid var(--border);
+            padding-top: var(--sp-5);
+            margin-top: var(--sp-1);
           }
           .proof-grid-wrap > :global(.proof-item-cell:last-child) {
             grid-column: 1 / -1;

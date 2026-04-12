@@ -1,9 +1,9 @@
 export const PROOF_STATS: readonly { value: number; suffix: string; label: string; isFloat: boolean; isAccent: boolean; display?: string }[] = [
-  { value: 4.2, suffix: ' hrs', label: 'saved per week\nper business', isFloat: true, isAccent: true },
+  { value: 4.2, suffix: ' hrs', label: 'saved per week\nper business', isFloat: true, isAccent: false },
   { value: 94, suffix: '%', label: 'invoices paid\non time', isFloat: false, isAccent: false },
   { value: 5, suffix: ' min', label: 'average\nsetup time', isFloat: false, isAccent: false },
   { value: 33, suffix: 'M+', label: 'service businesses\nunderserved', isFloat: false, isAccent: false },
-  { value: 0, suffix: '', label: 'app download\never required', isFloat: false, isAccent: true, display: '$0' },
+  { value: 0, suffix: '', label: 'app download\never required', isFloat: false, isAccent: false, display: '$0' },
 ];
 
 export const PROBLEMS = [
