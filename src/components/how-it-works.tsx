@@ -127,7 +127,7 @@ export default function HowItWorks() {
           {/* Phone Demo */}
           <div className="demo-wrap-col">
             <div style={{ position: 'sticky', top: 96 }}>
-              <div style={{ width: 264, margin: '0 auto', position: 'relative' }}>
+              <div style={{ width: 300, margin: '0 auto', position: 'relative' }}>
                 <div
                   style={{
                     position: 'absolute',
@@ -157,7 +157,6 @@ export default function HowItWorks() {
                 <div className="phone-tilt-wrap">
                   <PhoneMockup
                     messages={[...HOW_IT_WORKS_STEPS[activeStep].messages]}
-                    size="small"
                   />
                 </div>
               </div>

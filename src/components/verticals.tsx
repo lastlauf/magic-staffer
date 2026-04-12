@@ -203,7 +203,6 @@ export default function Verticals() {
                   messages={[...vertical.messages]}
                   headerName="Staffable"
                   headerEmoji={vertical.emoji}
-                  size="small"
                 />
               </div>
             </div>
