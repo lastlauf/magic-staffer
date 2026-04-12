@@ -100,9 +100,7 @@ export default function ProofBar() {
             padding: var(--sp-5) var(--sp-3);
           }
           .proof-grid-wrap > :global(.proof-item-cell:nth-child(n+3)) {
-            border-top: 1px solid var(--border);
             padding-top: var(--sp-5);
-            margin-top: var(--sp-1);
           }
           .proof-grid-wrap > :global(.proof-item-cell:last-child) {
             grid-column: 1 / -1;
