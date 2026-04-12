@@ -25,7 +25,7 @@ function ProofItem({
         className="proof-stat-num"
         style={{
           fontFamily: 'var(--font-display)',
-          fontSize: '2.25rem',
+          fontSize: 'clamp(1.75rem, 4vw, 2.25rem)',
           fontWeight: 700,
           lineHeight: 1,
           color: 'var(--text)',
@@ -89,18 +89,18 @@ export default function ProofBar() {
         }
         @media (max-width: 768px) {
           .proof-grid-wrap {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 0;
           }
           .proof-grid-wrap > :global(.proof-item-cell) {
             border-right: none;
-            padding: var(--sp-3) var(--sp-2);
+            padding: var(--sp-4) var(--sp-3);
           }
-          .proof-grid-wrap > :global(.proof-item-cell:nth-child(n+4)) {
+          .proof-grid-wrap > :global(.proof-item-cell:nth-child(n+3)) {
             border-top: 1px solid var(--border);
           }
-          .proof-grid-wrap > :global(.proof-stat-num) {
-            font-size: 1.75rem !important;
+          .proof-grid-wrap > :global(.proof-item-cell:last-child) {
+            grid-column: 1 / -1;
           }
         }
       `}</style>
