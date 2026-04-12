@@ -57,7 +57,7 @@ export default function LeadCaptureForm({ variant = 'hero' }: { variant?: 'hero'
           You&apos;re on the list!
         </div>
         <div style={{ fontSize: '0.875rem', color: isCTA ? 'rgba(255,255,255,0.8)' : 'var(--text-2)' }}>
-          We&apos;ll reach out when Staffable is ready for you.
+          Check your inbox — we just sent you a confirmation.
         </div>
       </div>
     );

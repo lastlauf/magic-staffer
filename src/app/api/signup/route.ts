@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createServerSupabase } from '@/lib/supabase';
+import { getResend } from '@/lib/resend';
+import WelcomeEmail from '@/emails/welcome';
 
 export async function POST(req: NextRequest) {
   try {
@@ -23,6 +25,21 @@ export async function POST(req: NextRequest) {
       }
       console.error('Supabase insert error:', error);
       return NextResponse.json({ error: 'Database error' }, { status: 500 });
+    }
+
+    // Send welcome email (non-blocking — signup succeeds even if email fails)
+    const resend = getResend();
+    if (resend) {
+      try {
+        await resend.emails.send({
+          from: 'Staffable <onboarding@resend.dev>',
+          to: email,
+          subject: `Welcome to the waitlist, ${name}!`,
+          react: WelcomeEmail({ name, businessType }),
+        });
+      } catch (emailError) {
+        console.error('Welcome email failed:', emailError);
+      }
     }
 
     return NextResponse.json({ success: true });
