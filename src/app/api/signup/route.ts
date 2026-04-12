@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createServerSupabase } from '@/lib/supabase';
 import { getResend } from '@/lib/resend';
-import WelcomeEmail from '@/emails/welcome';
+import { getWelcomeEmailHtml } from '@/emails/welcome';
 
 export async function POST(req: NextRequest) {
   try {
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
           from: 'Staffable <onboarding@resend.dev>',
           to: email,
           subject: `Welcome to the waitlist, ${name}!`,
-          react: WelcomeEmail({ name, businessType }),
+          html: getWelcomeEmailHtml({ name, businessType }),
         });
         if (emailError) {
           console.error('Resend API error:', JSON.stringify(emailError));
