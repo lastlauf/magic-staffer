@@ -127,11 +127,39 @@ export default function HowItWorks() {
           {/* Phone Demo */}
           <div className="demo-wrap-col">
             <div style={{ position: 'sticky', top: 96 }}>
-              <div style={{ width: 264, margin: '0 auto' }}>
-                <PhoneMockup
-                  messages={[...HOW_IT_WORKS_STEPS[activeStep].messages]}
-                  size="small"
+              <div style={{ width: 264, margin: '0 auto', position: 'relative' }}>
+                <div
+                  style={{
+                    position: 'absolute',
+                    width: 280,
+                    height: 280,
+                    borderRadius: '50%',
+                    filter: 'blur(50px)',
+                    background: 'rgba(255,90,95,0.06)',
+                    top: -60,
+                    right: -50,
+                    pointerEvents: 'none',
+                  }}
                 />
+                <div
+                  style={{
+                    position: 'absolute',
+                    width: 200,
+                    height: 200,
+                    borderRadius: '50%',
+                    filter: 'blur(50px)',
+                    background: 'rgba(34,197,94,0.05)',
+                    bottom: 40,
+                    left: -40,
+                    pointerEvents: 'none',
+                  }}
+                />
+                <div className="phone-tilt-wrap">
+                  <PhoneMockup
+                    messages={[...HOW_IT_WORKS_STEPS[activeStep].messages]}
+                    size="small"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -139,6 +167,14 @@ export default function HowItWorks() {
       </div>
 
       <style jsx>{`
+        .phone-tilt-wrap {
+          transform: rotate(2deg);
+          filter: drop-shadow(0 32px 64px rgba(0,0,0,0.14));
+          transition: transform 0.4s var(--ease-silk);
+        }
+        .phone-tilt-wrap:hover {
+          transform: rotate(0deg);
+        }
         .hiw-grid-wrap {
           display: grid;
           grid-template-columns: 1fr 1fr;

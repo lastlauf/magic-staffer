@@ -85,18 +85,21 @@ export const TESTIMONIALS = [
     quote: "I used to spend Sunday nights texting everyone about Monday's jobs. Now Staffable does it automatically at 8pm. I can't imagine going back.",
     name: 'Maria Rodriguez',
     initials: 'MR',
+    image: '/testimonials/maria.jpg',
     business: 'Crystal Clean · Chicago · 6 crew',
   },
   {
     quote: "My guys don't use apps. But they all use WhatsApp. Staffable was literally the only tool that worked for my landscaping crew without any convincing.",
     name: 'Derek Kim',
     initials: 'DK',
+    image: '/testimonials/derek.jpg',
     business: 'GreenEdge Landscaping · Austin · 9 crew',
   },
   {
     quote: "Invoicing used to take me two hours on Fridays. Now it takes five minutes. And I get paid faster because clients just tap a link.",
     name: 'Sandra Perez',
     initials: 'SP',
+    image: '/testimonials/sandra.jpg',
     business: 'Spotless Pro · Miami · 4 crew',
   },
 ] as const;

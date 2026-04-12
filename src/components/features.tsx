@@ -1,6 +1,55 @@
 import { FEATURES } from '@/lib/constants';
 import SectionHeader from './ui/section-header';
 
+const FEATURE_ICONS = [
+  // Smart Scheduling
+  <svg key="schedule" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect x="3" y="4" width="18" height="18" rx="3" stroke="#FF5A5F" strokeWidth="2" />
+    <path d="M3 10h18" stroke="#FF5A5F" strokeWidth="2" />
+    <path d="M8 2v4M16 2v4" stroke="#FF5A5F" strokeWidth="2" strokeLinecap="round" />
+    <circle cx="8" cy="15" r="1.5" fill="#FF5A5F" />
+    <circle cx="12" cy="15" r="1.5" fill="#FF5A5F" />
+  </svg>,
+  // Auto Reminders
+  <svg key="reminders" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M12 3a6 6 0 0 1 6 6c0 3 .8 5.2 1.6 6.5.3.4-.1 1-.6 1H5c-.5 0-.9-.6-.6-1C5.2 14.2 6 12 6 9a6 6 0 0 1 6-6z" stroke="#FF5A5F" strokeWidth="2" />
+    <path d="M10 20.5a2.5 2.5 0 0 0 4 0" stroke="#FF5A5F" strokeWidth="2" strokeLinecap="round" />
+  </svg>,
+  // Instant Invoicing
+  <svg key="invoicing" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M4 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v18l-3-2-3 2-3-2-3 2-3-2V4z" stroke="#FF5A5F" strokeWidth="2" strokeLinejoin="round" />
+    <path d="M8 8h8M8 12h5" stroke="#FF5A5F" strokeWidth="1.8" strokeLinecap="round" />
+  </svg>,
+  // Supply Ordering
+  <svg key="supply" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z" stroke="#FF5A5F" strokeWidth="2" strokeLinejoin="round" />
+    <path d="M12 12l9-5M12 12v10M12 12L3 7" stroke="#FF5A5F" strokeWidth="2" />
+  </svg>,
+  // Morning Digest
+  <svg key="digest" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <circle cx="12" cy="12" r="4" stroke="#FF5A5F" strokeWidth="2" />
+    <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="#FF5A5F" strokeWidth="2" strokeLinecap="round" />
+  </svg>,
+  // Card Payments
+  <svg key="payments" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <rect x="2" y="5" width="20" height="14" rx="3" stroke="#FF5A5F" strokeWidth="2" />
+    <path d="M2 10h20" stroke="#FF5A5F" strokeWidth="2" />
+    <path d="M6 15h4" stroke="#FF5A5F" strokeWidth="1.8" strokeLinecap="round" />
+  </svg>,
+  // Multi-Crew
+  <svg key="crew" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <circle cx="9" cy="7" r="3" stroke="#FF5A5F" strokeWidth="2" />
+    <path d="M3 21v-1a5 5 0 0 1 10 0v1" stroke="#FF5A5F" strokeWidth="2" strokeLinecap="round" />
+    <circle cx="17" cy="8" r="2.5" stroke="#FF5A5F" strokeWidth="1.8" />
+    <path d="M21 21v-.5a4 4 0 0 0-3-3.9" stroke="#FF5A5F" strokeWidth="1.8" strokeLinecap="round" />
+  </svg>,
+  // Weekly Reports
+  <svg key="reports" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M7 17V11M12 17V7M17 17v-4" stroke="#FF5A5F" strokeWidth="2.5" strokeLinecap="round" />
+    <path d="M3 21h18" stroke="#FF5A5F" strokeWidth="2" strokeLinecap="round" />
+  </svg>,
+];
+
 export default function Features() {
   return (
     <section id="features" style={{ padding: 'var(--section-py) 0' }}>
@@ -39,17 +88,15 @@ export default function Features() {
                   width: 46,
                   height: 46,
                   borderRadius: 13,
-                  background: 'var(--bg)',
-                  border: '1px solid var(--border-2)',
+                  background: 'var(--accent-light)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '1.25rem',
                   marginBottom: 'var(--sp-4)',
                   flexShrink: 0,
                 }}
               >
-                {feature.icon}
+                {FEATURE_ICONS[i]}
               </div>
               <div style={{ fontSize: '0.9375rem', fontWeight: 600, color: 'var(--text)', marginBottom: 'var(--sp-2)' }}>
                 {feature.title}

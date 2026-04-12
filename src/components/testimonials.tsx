@@ -55,24 +55,20 @@ export default function Testimonials() {
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <div
+                <img
+                  src={t.image}
+                  alt={t.name}
+                  width={40}
+                  height={40}
                   style={{
                     width: 40,
                     height: 40,
                     borderRadius: '50%',
-                    background: 'var(--accent-light)',
-                    border: '2px solid rgba(255,90,95,0.2)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontWeight: 700,
-                    fontSize: '0.875rem',
-                    color: 'var(--accent)',
+                    objectFit: 'cover',
+                    border: '2px solid rgba(255,90,95,0.15)',
                     flexShrink: 0,
                   }}
-                >
-                  {t.initials}
-                </div>
+                />
                 <div>
                   <div style={{ fontWeight: 600, fontSize: '0.9375rem', color: 'var(--text)' }}>{t.name}</div>
                   <div style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>{t.business}</div>

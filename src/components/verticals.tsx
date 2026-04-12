@@ -43,8 +43,8 @@ export default function Verticals() {
 
   const handleTabClick = (index: number) => {
     if (autoRef.current) clearInterval(autoRef.current);
+    autoRef.current = null;
     setActiveIndex(index);
-    startAuto(index);
   };
 
   return (
@@ -171,17 +171,55 @@ export default function Verticals() {
 
           {/* Right — Phone Mockup */}
           <div className="verticals-phone-col" style={{ display: 'flex', justifyContent: 'center' }}>
-            <PhoneMockup
-              messages={[...vertical.messages]}
-              headerName="Staffable"
-              headerEmoji={vertical.emoji}
-              size="small"
-            />
+            <div style={{ position: 'relative' }}>
+              <div
+                style={{
+                  position: 'absolute',
+                  width: 280,
+                  height: 280,
+                  borderRadius: '50%',
+                  filter: 'blur(50px)',
+                  background: 'rgba(255,90,95,0.06)',
+                  top: -60,
+                  right: -50,
+                  pointerEvents: 'none',
+                }}
+              />
+              <div
+                style={{
+                  position: 'absolute',
+                  width: 200,
+                  height: 200,
+                  borderRadius: '50%',
+                  filter: 'blur(50px)',
+                  background: 'rgba(34,197,94,0.05)',
+                  bottom: 40,
+                  left: -40,
+                  pointerEvents: 'none',
+                }}
+              />
+              <div className="phone-tilt-wrap">
+                <PhoneMockup
+                  messages={[...vertical.messages]}
+                  headerName="Staffable"
+                  headerEmoji={vertical.emoji}
+                  size="small"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <style jsx>{`
+        .phone-tilt-wrap {
+          transform: rotate(2deg);
+          filter: drop-shadow(0 32px 64px rgba(0,0,0,0.14));
+          transition: transform 0.4s var(--ease-silk);
+        }
+        .phone-tilt-wrap:hover {
+          transform: rotate(0deg);
+        }
         .verticals-content-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
