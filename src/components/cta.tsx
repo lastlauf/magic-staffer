@@ -25,7 +25,7 @@ export default function CTA() {
       />
 
       {/* Ghost text */}
-      <div className="cta-ghost-text">Staffable</div>
+      <div className="cta-ghost-text">Magic Staffer</div>
 
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)', position: 'relative' }}>
         <div style={{ textAlign: 'center' }}>

@@ -47,7 +47,7 @@ export default function PullQuote() {
         >
           &ldquo;I didn&apos;t start a cleaning business to spend all day{' '}
           <span style={{ color: 'var(--accent)', fontStyle: 'italic' }}>texting from my phone.</span>{' '}
-          Staffable gives me those hours back.&rdquo;
+          Magic Staffer gives me those hours back.&rdquo;
         </p>
         <p
           className="reveal"

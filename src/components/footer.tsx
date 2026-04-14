@@ -22,7 +22,7 @@ export default function Footer() {
                 display: 'block',
               }}
             >
-              Staffable
+              Magic Staffer
             </span>
             <p style={{ fontSize: '0.875rem', color: '#78716C', lineHeight: 1.65, maxWidth: 240 }}>
               The WhatsApp-native operations platform for cleaning, landscaping, and field service businesses.
@@ -80,7 +80,7 @@ export default function Footer() {
             gap: 'var(--sp-4)',
           }}
         >
-          <span>&copy; 2026 Staffable. All rights reserved.</span>
+          <span>&copy; 2026 Magic Staffer. All rights reserved.</span>
           <span>Built for the people who make things clean</span>
         </div>
       </div>

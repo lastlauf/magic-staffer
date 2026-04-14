@@ -56,7 +56,7 @@ export default function Verticals() {
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 var(--container-px)' }}>
         <SectionHeader
           eyebrow="Built for your industry"
-          title={<>See Staffable in <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>your</em> world.</>}
+          title={<>See Magic Staffer in <em style={{ fontStyle: 'italic', color: 'var(--accent)' }}>your</em> world.</>}
           subtitle="Real conversations. Real workflows. Real results."
         />
 
@@ -145,7 +145,7 @@ export default function Verticals() {
             </div>
 
             <p style={{ fontSize: '0.875rem', color: 'var(--text-2)', lineHeight: 1.65, marginBottom: 'var(--sp-5)' }}>
-              See how {vertical.persona} uses Staffable to automate {vertical.name.toLowerCase()} operations — from booking to payment, all through WhatsApp.
+              See how {vertical.persona} uses Magic Staffer to automate {vertical.name.toLowerCase()} operations — from booking to payment, all through WhatsApp.
             </p>
 
             {/* Metrics */}
@@ -201,7 +201,7 @@ export default function Verticals() {
               <div className="phone-tilt-wrap">
                 <PhoneMockup
                   messages={[...vertical.messages]}
-                  headerName="Staffable"
+                  headerName="Magic Staffer"
                   headerEmoji={vertical.emoji}
                 />
               </div>

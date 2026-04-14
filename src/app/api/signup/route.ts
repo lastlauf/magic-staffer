@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     if (resend) {
       try {
         const { data, error: emailError } = await resend.emails.send({
-          from: 'Staffable <onboarding@resend.dev>',
+          from: 'Magic Staffer <onboarding@resend.dev>',
           to: email,
           subject: `Welcome to the waitlist, ${name}!`,
           html: getWelcomeEmailHtml({ name, businessType }),

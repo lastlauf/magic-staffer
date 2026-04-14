@@ -63,7 +63,7 @@ export default function HowItWorks() {
         <SectionHeader
           eyebrow="Simple by design"
           title={<>Your whole business,<br />one WhatsApp conversation.</>}
-          subtitle="Just text Staffable like you'd text a team member. It handles the rest."
+          subtitle="Just text Magic Staffer like you'd text a team member. It handles the rest."
         />
 
         <div className="hiw-grid-wrap">

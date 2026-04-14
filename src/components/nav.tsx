@@ -78,7 +78,7 @@ export default function Nav() {
                 <path d="M6 8.5l1.7 1.7L11 6" stroke="#FF5A5F" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
-            Staffable
+            Magic Staffer
           </a>
 
           <div

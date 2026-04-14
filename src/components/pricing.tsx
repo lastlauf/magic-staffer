@@ -147,7 +147,7 @@ export default function Pricing() {
         </div>
 
         <p style={{ textAlign: 'center', marginTop: 'var(--sp-5)', fontSize: '0.875rem', color: 'var(--text-muted)' }}>
-          + 0.5% on card payments processed through Staffable. No monthly minimum.
+          + 0.5% on card payments processed through Magic Staffer. No monthly minimum.
         </p>
       </div>
 

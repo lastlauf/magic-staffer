@@ -68,7 +68,7 @@ export default function Hero() {
                 transitionDelay: '0.16s',
               }}
             >
-              Staffable handles scheduling, job reminders, invoices, and supply orders — all inside
+              Magic Staffer handles scheduling, job reminders, invoices, and supply orders — all inside
               the conversations you&apos;re already having. No app. No training. Five minutes to set up.
             </p>
 

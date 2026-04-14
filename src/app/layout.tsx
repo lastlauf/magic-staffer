@@ -16,10 +16,10 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Staffable — Run your whole crew from one WhatsApp number',
+  title: 'Magic Staffer — Run your whole crew from one WhatsApp number',
   description: 'The WhatsApp-native operations platform for cleaning, landscaping, and field service businesses. Scheduling, invoicing, reminders, and supply ordering — all from one conversation.',
   openGraph: {
-    title: 'Staffable — Run your whole crew from one WhatsApp number',
+    title: 'Magic Staffer — Run your whole crew from one WhatsApp number',
     description: 'Scheduling, invoicing, reminders, and supply ordering for field service businesses — all through WhatsApp.',
     type: 'website',
   },

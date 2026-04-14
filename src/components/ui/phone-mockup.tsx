@@ -7,7 +7,7 @@ interface Message {
 
 export default function PhoneMockup({
   messages,
-  headerName = 'Staffable',
+  headerName = 'Magic Staffer',
   headerEmoji = '🧹',
   className = '',
   size = 'large',
@@ -140,7 +140,7 @@ export default function PhoneMockup({
             border: isSmall ? 'none' : '1px solid #EEE',
           }}
         >
-          Message Staffable…
+          Message Magic Staffer…
         </div>
         <span style={{ fontSize: isSmall ? '0.875rem' : '1rem' }}>🎤</span>
       </div>

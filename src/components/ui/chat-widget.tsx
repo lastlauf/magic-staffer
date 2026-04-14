@@ -29,7 +29,7 @@ export default function ChatWidget() {
   };
 
   const displayMessages = messages.length === 0
-    ? [{ id: 'welcome', role: 'assistant' as const, content: "Hi! I'm Staffable's setup assistant. I can answer questions about features, pricing, and how to get started. What would you like to know?" }]
+    ? [{ id: 'welcome', role: 'assistant' as const, content: "Hi! I'm Magic Staffer's setup assistant. I can answer questions about features, pricing, and how to get started. What would you like to know?" }]
     : messages;
 
   const getContent = (msg: (typeof displayMessages)[number]) => {
@@ -102,7 +102,7 @@ export default function ChatWidget() {
             }}
           >
             <div>
-              <strong style={{ display: 'block', fontSize: '0.9375rem' }}>Staffable Support</strong>
+              <strong style={{ display: 'block', fontSize: '0.9375rem' }}>Magic Staffer Support</strong>
               <span style={{ fontSize: '0.75rem', opacity: 0.8 }}>AI Assistant</span>
             </div>
             <button

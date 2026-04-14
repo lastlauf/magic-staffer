@@ -30,7 +30,7 @@ export const PROBLEMS = [
 export const HOW_IT_WORKS_STEPS = [
   {
     title: 'Book a job in seconds',
-    description: 'Text a client name, address, and date. Staffable confirms the crew member, adds it to the schedule, and notifies everyone automatically.',
+    description: 'Text a client name, address, and date. Magic Staffer confirms the crew member, adds it to the schedule, and notifies everyone automatically.',
     messages: [
       { text: 'Book Rosa for Johnson house Thursday 9am', direction: 'out' as const, time: '9:01 AM' },
       { text: 'Booked! Rosa confirmed Thu 9am at Johnson house. Both Rosa and client notified.', direction: 'in' as const, time: '9:01 AM', emoji: '✅' },
@@ -54,7 +54,7 @@ export const HOW_IT_WORKS_STEPS = [
   },
   {
     title: 'Reorder supplies automatically',
-    description: 'Tell Staffable what you\'re running low on. It places the order with your usual supplier and confirms the delivery date.',
+    description: 'Tell Magic Staffer what you\'re running low on. It places the order with your usual supplier and confirms the delivery date.',
     messages: [
       { text: 'Running low on microfiber cloths', direction: 'out' as const, time: '9:05 AM' },
       { text: 'Order placed with CleanPro Supply — 24 cloths ($18.50). Delivery Thursday. Low-stock alert set for next time.', direction: 'in' as const, time: '9:05 AM', emoji: '📦' },
@@ -82,14 +82,14 @@ export const FEATURES = [
 
 export const TESTIMONIALS = [
   {
-    quote: "I used to spend Sunday nights texting everyone about Monday's jobs. Now Staffable does it automatically at 8pm. I can't imagine going back.",
+    quote: "I used to spend Sunday nights texting everyone about Monday's jobs. Now Magic Staffer does it automatically at 8pm. I can't imagine going back.",
     name: 'Maria Rodriguez',
     initials: 'MR',
     image: '/testimonials/maria.jpg',
     business: 'Crystal Clean · Chicago · 6 crew',
   },
   {
-    quote: "My guys don't use apps. But they all use WhatsApp. Staffable was literally the only tool that worked for my landscaping crew without any convincing.",
+    quote: "My guys don't use apps. But they all use WhatsApp. Magic Staffer was literally the only tool that worked for my landscaping crew without any convincing.",
     name: 'Derek Kim',
     initials: 'DK',
     image: '/testimonials/derek.jpg',
@@ -151,15 +151,15 @@ export const PRICING_TIERS = [
 export const FAQ_ITEMS = [
   {
     question: 'Does my crew need to download an app?',
-    answer: 'No — Staffable runs entirely through WhatsApp. Your crew receives and replies to messages as they always have. The only "setup" is you texting your business number to our onboarding line.',
+    answer: 'No — Magic Staffer runs entirely through WhatsApp. Your crew receives and replies to messages as they always have. The only "setup" is you texting your business number to our onboarding line.',
   },
   {
     question: "What if my clients don't use WhatsApp?",
-    answer: 'You can configure Staffable to reach clients via SMS instead. Most US clients prefer SMS for business messages, and the invoice payment link works identically in both channels.',
+    answer: 'You can configure Magic Staffer to reach clients via SMS instead. Most US clients prefer SMS for business messages, and the invoice payment link works identically in both channels.',
   },
   {
     question: 'How does the 5-minute setup actually work?',
-    answer: "You text your business phone number to our setup line. Staffable asks a few questions — crew names, service area, working hours — in a WhatsApp conversation. No forms. No portals. You're running before your second cup of coffee.",
+    answer: "You text your business phone number to our setup line. Magic Staffer asks a few questions — crew names, service area, working hours — in a WhatsApp conversation. No forms. No portals. You're running before your second cup of coffee.",
   },
   {
     question: 'Is my client and payment data secure?',
@@ -167,11 +167,11 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'Can I use my existing WhatsApp Business number?',
-    answer: "Yes — if you have a WhatsApp Business account, Staffable can connect directly to it. If not, we'll provision a dedicated number for you during setup at no extra charge.",
+    answer: "Yes — if you have a WhatsApp Business account, Magic Staffer can connect directly to it. If not, we'll provision a dedicated number for you during setup at no extra charge.",
   },
   {
-    question: 'What industries does Staffable support?',
-    answer: 'Staffable is built for any field service business: residential cleaning, commercial cleaning, landscaping, pool service, pest control, HVAC, and more. If you schedule crews and send invoices, Staffable will work for you from day one.',
+    question: 'What industries does Magic Staffer support?',
+    answer: 'Magic Staffer is built for any field service business: residential cleaning, commercial cleaning, landscaping, pool service, pest control, HVAC, and more. If you schedule crews and send invoices, Magic Staffer will work for you from day one.',
   },
 ] as const;
 
