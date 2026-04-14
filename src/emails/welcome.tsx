@@ -79,7 +79,7 @@ export function getWelcomeEmailHtml({ name, businessType }: WelcomeEmailProps): 
                   <td style="padding-top:20px;font-size:12px;color:#A8A29E;line-height:1.5;">
                     Magic Staffer&mdash;Run your whole crew from one WhatsApp number.
                     <br/>
-                    You're receiving this because you signed up at magicstaffer.vercel.app.
+                    You're receiving this because you signed up at magicstaffer.com.
                   </td>
                 </tr>
               </table>
