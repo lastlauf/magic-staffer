@@ -36,8 +36,8 @@ export default function Hero() {
                 boxShadow: 'var(--shadow-xs)',
               }}
             >
-              <span style={{ color: 'var(--amber)', letterSpacing: 1, fontSize: '0.75rem' }}>★★★★★</span>
-              <span>4.9 · Trusted by 200+ service crews</span>
+              <span style={{ fontSize: '0.8125rem' }}>🤖</span>
+              <span>Powered by AI agents — no app needed</span>
             </div>
 
             <h1
@@ -92,7 +92,7 @@ export default function Hero() {
                 <circle cx="7.5" cy="7.5" r="6.5" stroke="#A8A29E" strokeWidth="1.4" />
                 <path d="M5 7.5l1.8 1.8L10.5 5.5" stroke="#A8A29E" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              Free 30-day trial&nbsp;·&nbsp;No credit card&nbsp;·&nbsp;Cancel anytime
+              No commitment&nbsp;·&nbsp;No credit card&nbsp;·&nbsp;Early access spots limited
             </p>
           </div>
 

@@ -45,11 +45,13 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Trigger Button */}
+      {/* Survey Button */}
       {!isOpen && (
-        <button
-          onClick={() => setIsOpen(true)}
-          aria-label="Open support chat"
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfG5_GaN2JKdwmcC61uo6TVc_lhbkQjyq_VttQ18N91tebHUQ/viewform?usp=header"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Take our survey"
           style={{
             position: 'fixed',
             bottom: 20,
@@ -69,6 +71,7 @@ export default function ChatWidget() {
             borderRadius: 100,
             boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
             transition: 'transform 0.2s var(--ease-spring), box-shadow 0.2s var(--ease-silk)',
+            textDecoration: 'none',
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-2px)';
@@ -79,11 +82,15 @@ export default function ChatWidget() {
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
           }}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
           </svg>
-          Need help?
-        </button>
+          Help shape Magic Staffer
+        </a>
       )}
 
       {/* Chat Window */}

@@ -98,11 +98,13 @@ export default function Features() {
               >
                 {FEATURE_ICONS[i]}
               </div>
-              <div style={{ fontSize: '0.9375rem', fontWeight: 600, color: 'var(--text)', marginBottom: 'var(--sp-2)' }}>
-                {feature.title}
-              </div>
-              <div style={{ fontSize: '0.8125rem', color: 'var(--text-2)', lineHeight: 1.6 }}>
-                {feature.description}
+              <div className="feat-text">
+                <div style={{ fontSize: '0.9375rem', fontWeight: 600, color: 'var(--text)', marginBottom: 'var(--sp-2)' }}>
+                  {feature.title}
+                </div>
+                <div style={{ fontSize: '0.8125rem', color: 'var(--text-2)', lineHeight: 1.6 }}>
+                  {feature.description}
+                </div>
               </div>
             </div>
           ))}
@@ -126,13 +128,17 @@ export default function Features() {
           .feat-grid-wrap > :global(.feat-card-el) {
             display: flex !important;
             flex-direction: row !important;
-            align-items: flex-start !important;
+            align-items: center !important;
             gap: var(--sp-4) !important;
-            padding: var(--sp-4) !important;
+            padding: var(--sp-4) var(--sp-5) !important;
             border-radius: 14px !important;
           }
           .feat-grid-wrap > :global(.feat-card-el) :global(.feat-icon) {
             margin-bottom: 0 !important;
+          }
+          .feat-grid-wrap > :global(.feat-card-el) :global(.feat-text) {
+            flex: 1;
+            min-width: 0;
           }
         }
       `}</style>

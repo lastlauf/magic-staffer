@@ -55,6 +55,8 @@ export default function FAQ() {
                       color: isOpen ? 'var(--accent)' : 'var(--text-muted)',
                       fontSize: '1.1rem',
                       fontWeight: 300,
+                      lineHeight: 1,
+                      paddingBottom: 1,
                       transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
                       transition: 'transform 0.3s var(--ease-expo-out), border-color 0.2s var(--ease-silk), color 0.2s var(--ease-silk)',
                     }}

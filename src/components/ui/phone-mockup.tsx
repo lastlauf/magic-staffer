@@ -20,7 +20,7 @@ export default function PhoneMockup({
 }) {
   const isSmall = size === 'small';
   const width = isSmall ? 264 : 300;
-  const radius = isSmall ? 36 : 42;
+  const radius = isSmall ? 18 : 21;
 
   return (
     <div
@@ -34,25 +34,13 @@ export default function PhoneMockup({
         boxShadow: 'var(--shadow-xl)',
       }}
     >
-      {/* Notch */}
+      {/* Status Bar */}
       <div
         style={{
           background: 'var(--text)',
           height: isSmall ? 24 : 28,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
         }}
-      >
-        <div
-          style={{
-            width: 60,
-            height: 5,
-            background: 'rgba(255,255,255,0.15)',
-            borderRadius: 100,
-          }}
-        />
-      </div>
+      />
 
       {/* WhatsApp Header */}
       <div
@@ -142,7 +130,10 @@ export default function PhoneMockup({
         >
           Message Magic Staffer…
         </div>
-        <span style={{ fontSize: isSmall ? '0.875rem' : '1rem' }}>🎤</span>
+        <svg width={isSmall ? 16 : 18} height={isSmall ? 16 : 18} viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
+          <path d="M22 2L11 13" stroke="#25D366" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="#25D366" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </div>
     </div>
   );

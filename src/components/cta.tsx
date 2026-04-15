@@ -57,7 +57,7 @@ export default function CTA() {
               lineHeight: 1.6,
             }}
           >
-            Start your free 30-day trial. No credit card. No contract. Sign up now and you&apos;re running in 5 minutes.
+            Sign up for early access. Be the first to try Magic Staffer when we launch in your area.
           </p>
 
           <div className="reveal" style={{ maxWidth: 480, margin: '0 auto var(--sp-4)' }}>
@@ -65,7 +65,7 @@ export default function CTA() {
           </div>
 
           <p className="reveal" style={{ fontSize: '0.8125rem', color: 'rgba(255,255,255,0.65)' }}>
-            Free for 30 days&nbsp;·&nbsp;5-minute setup&nbsp;·&nbsp;Cancel anytime
+            No commitment&nbsp;·&nbsp;5-minute setup&nbsp;·&nbsp;Early members get priority access
           </p>
         </div>
       </div>
