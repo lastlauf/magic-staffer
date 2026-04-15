@@ -95,7 +95,7 @@ export default function PhoneMockup({
           display: 'flex',
           flexDirection: 'column',
           gap: isSmall ? 6 : 7,
-          minHeight: isSmall ? 310 : 'auto',
+          minHeight: isSmall ? 310 : 420,
         }}
       >
         {messages.map((msg, i) => (
